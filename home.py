@@ -44,7 +44,7 @@ def open_popup_DRIVER():
          times -= 1
 
    Label(top, font=('Helvetica bold', 22), text='Set the Timer').place(x=105, y=70)
-   Button(top, text='START', bd='2', bg='IndianRed1', font=('Helvetica bold',10), command = countdowntimer).place(x=167, y=165)
+   Button(top, text='START', bd='2', font=('Helvetica bold',10), command = countdowntimer).place(x=167, y=165)
 def open_popup_REPORT():
    top= Toplevel(win)
    top.geometry("750x250")
