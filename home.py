@@ -50,6 +50,19 @@ def open_popup_REPORT():
    top.geometry("750x250")
    top.title("Reports")
 
+def receive():
+   import socket
+   import pickle
+   soc = socket.socket()
+   hostname="localhost"# 127.0.0.1 #0.0.0.0
+   port=65434
+   soc.connect((hostname,port))
+   data = soc.recv(1024)
+   res = pickle.loads(data)
+   print(res)
+   return res
+
+
 Label(win, text="choose the mode", font=('Helvetica 14 bold')).pack(pady=20)
 #Create a button in the main Window to open the popup
 ttk.Button(win, text= "Driving", command= open_popup_DRIVER).pack()
