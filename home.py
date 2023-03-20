@@ -2,6 +2,7 @@
 from tkinter import *
 from tkinter import ttk
 import time
+from blue import search
 #Create an instance of Tkinter frame
 win = Tk()
 #Set the geometry of Tkinter frame
@@ -109,22 +110,8 @@ def open_popup_REPORT():
 
 
 def receive():
-   blue.search()
-   blue.connect()
-   import socket
-   import pickle
-   soc = socket.socket()
-   hostname="localhost"# 127.0.0.1 #0.0.0.0
-   port=65434
-   soc.connect((hostname,port))
-   data = soc.recv(1024)
-   res = pickle.loads(data)
-   return res
-
-
-
-
-
+   devices=search()
+   return devices
 
 Label(win, text="choose the mode", font=('Helvetica 14 bold')).pack(pady=20)
 #Create a button in the main Window to open the popup
