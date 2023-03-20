@@ -4,3 +4,9 @@ C:\Users\Al-Shaimaa Atef\Downloads\TUIO11_NET\obj\Debug\TUIO_DEMO.csproj.Assembl
 C:\Users\Al-Shaimaa Atef\Downloads\TUIO11_NET\obj\Debug\TUIO_DEMO.csproj.CoreCompileInputs.cache
 C:\Users\Al-Shaimaa Atef\Downloads\TUIO11_NET\obj\Debug\TuioDemo.exe
 C:\Users\Al-Shaimaa Atef\Downloads\TUIO11_NET\obj\Debug\TuioDemo.pdb
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\bin\Debug\TuioDemo.exe
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\bin\Debug\TuioDemo.pdb
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\obj\Debug\TUIO_DEMO.csprojAssemblyReference.cache
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\obj\Debug\TUIO_DEMO.csproj.CoreCompileInputs.cache
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\obj\Debug\TuioDemo.exe
+E:\University\Semester 8\Human Computer Interaction\HCI-project\TUIO11_NET\obj\Debug\TuioDemo.pdb
