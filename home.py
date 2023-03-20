@@ -52,7 +52,7 @@ def open_popup_REPORT():
    bluetooth.title("Reports")
    def foo():
       a = receive()
-      Label(bluetooth, text = a.get()).pack()
+      Label(bluetooth, text = a).pack()
    def LOGIN():
       logged= Toplevel(win)
       logged.geometry("750x250")
@@ -118,7 +118,6 @@ def receive():
    soc.connect((hostname,port))
    data = soc.recv(1024)
    res = pickle.loads(data)
-   print(res)
    return res
 
 
