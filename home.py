@@ -2,7 +2,10 @@
 from tkinter import *
 from tkinter import ttk
 import time
-from blue import search
+import numpy as geek
+#from blue import search
+import re
+from tkinter import messagebox
 #Create an instance of Tkinter frame
 win = Tk()
 #Set the geometry of Tkinter frame
@@ -55,7 +58,7 @@ def open_popup_REPORT():
       Label(bluetooth, text = a).pack()
    def LOGIN():
       logged= Toplevel(win)
-      logged.geometry("750x250")
+      logged.geometry("750x750")
       logged.title(chosen_device.get())
       logged.resizable(False, False)
       shepherd = chosen_device.get()
@@ -63,25 +66,57 @@ def open_popup_REPORT():
       def open_text():
          text_file = open(chosentxt, "r")
          content = text_file.read()
+         profilenums=re.findall(r'\b\d+\b', content)
+         
+         my_text_box.delete('1.0', END)
          my_text_box.insert(END, content)
          text_file.close()
+         text_file2 = open("car.txt", "r")
+         content2 = text_file2.read()
+         carnums=re.findall(r'\b\d+\b', content2)
+         my_text_box2.delete('1.0', END)
+         my_text_box2.insert(END, content2)
+         text_file2.close()
+         out_arr = []
+         diff = "car is"
+         for i in range(len(profilenums)):
+            result = int(profilenums[i]) - int(carnums[i])
+            if(result>=0):
+               diff += " increasing by "+ str(abs(result))
+            elif(result<0):
+               diff += " decreasing by "+ str(abs(result))
+            
+            
+            out_arr.append(result)
+         messagebox.showinfo("car info", diff)
+         
+      
 
       def save_text():
          text_file = open(chosentxt, "w")
          text_file.write(my_text_box.get(1.0, END))
          text_file.close()
+      def save_on_car():
+         text_file = open("car.txt", "w")
+         text_file.write(my_text_box.get(1.0, END))
+         text_file.close()
 
 # Creating a text box widget
-      my_text_box = Text(logged, height=10, width=40)
+      Label(logged, text="user profile", font=('Helvetica 14 bold')).pack(pady=20)
+      my_text_box = Text(logged, height=10, width=20)
       my_text_box.pack()
-
+      Label(logged, text="car settings", font=('Helvetica 14 bold')).pack(pady=20)
+      my_text_box2 = Text(logged, height=10, width=20)
+      my_text_box2.pack()
       open_btn = Button(logged, text="Open File", command=open_text)
       open_btn.pack()
 
 # Create a button to save the text
       save = Button(logged, text="Save File", command=save_text)
       save.pack()
-
+      save_car = Button(logged, text="override car settings", command=save_on_car)
+      save_car.pack()
+      #Label(logged, text= diff, font=('Helvetica 14 bold')).pack(pady=20)
       #def toggle():
       #   button1['text'] = toggle_text[button1['text']]
       #   button2['text'] = toggle_text[button2['text']]
@@ -118,3 +153,129 @@ Label(win, text="choose the mode", font=('Helvetica 14 bold')).pack(pady=20)
 #ttk.Button(win, text= "Driving", command= open_popup_DRIVER).pack()
 ttk.Button(win, text= "Reports", command= open_popup_REPORT).pack()
 win.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

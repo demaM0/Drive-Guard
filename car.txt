@@ -1,0 +1,9 @@
+CARSEAT: 20
+VOLUME: 30
+HEATING: 45
+MIRROR: 10
+
+
+
+
+
