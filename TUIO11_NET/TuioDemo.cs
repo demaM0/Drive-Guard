@@ -243,6 +243,7 @@ public class TuioDemo : Form, TuioListener
 					if (tobject.SymbolID == 0)
 					{
 						MessageBox.Show("Sound has successfully been chosen");
+						//change
 					}
 					if (tobject.SymbolID == 1)
 					{

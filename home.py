@@ -148,6 +148,24 @@ def receive():
    devices=search()
    return devices
 
+def connect():
+   import cv2
+   import mediapipe as mp
+   import socket
+   import pickle
+   listensocket=socket.socket()
+   Port=8000
+   maxConnections=5
+   IP=socket.gethostname()
+   listensocket.bind((IP,Port))
+   listensocket.listen(maxConnections)
+   print("Server started at " + IP + " on port " + str(Port))
+   clientsocket,address=listensocket.accept()
+   data=listensocket.recv(1024)
+   res = pickle.loads(data)
+   print("New connection made!")
+   
+
 Label(win, text="choose the mode", font=('Helvetica 14 bold')).pack(pady=20)
 #Create a button in the main Window to open the popup
 #ttk.Button(win, text= "Driving", command= open_popup_DRIVER).pack()
