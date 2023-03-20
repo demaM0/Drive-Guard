@@ -2,7 +2,6 @@
 from tkinter import *
 from tkinter import ttk
 import time
-
 #Create an instance of Tkinter frame
 win = Tk()
 #Set the geometry of Tkinter frame
@@ -110,6 +109,8 @@ def open_popup_REPORT():
 
 
 def receive():
+   blue.search()
+   blue.connect()
    import socket
    import pickle
    soc = socket.socket()
