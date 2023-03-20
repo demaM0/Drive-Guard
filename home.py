@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import time
 import numpy as geek
-#from blue import search
+from blue import search
 import re
 from tkinter import messagebox
 #Create an instance of Tkinter frame

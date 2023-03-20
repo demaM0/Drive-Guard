@@ -30,3 +30,19 @@ C:\Users\Al-Shaimaa Atef\Desktop\hci project\Ball\Ball\obj\Debug\netcoreapp3.1\B
 C:\Users\Al-Shaimaa Atef\Desktop\hci project\Ball\Ball\obj\Debug\netcoreapp3.1\Ball.dll
 C:\Users\Al-Shaimaa Atef\Desktop\hci project\Ball\Ball\obj\Debug\netcoreapp3.1\Ball.pdb
 C:\Users\Al-Shaimaa Atef\Desktop\hci project\Ball\Ball\obj\Debug\netcoreapp3.1\Ball.genruntimeconfig.cache
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.exe
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.deps.json
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.runtimeconfig.json
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.runtimeconfig.dev.json
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.dll
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\bin\Debug\netcoreapp3.1\Ball.pdb
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.csproj.AssemblyReference.cache
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.Form1.resources
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.csproj.GenerateResource.cache
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.AssemblyInfoInputs.cache
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.AssemblyInfo.cs
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.csproj.CoreCompileInputs.cache
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.dll
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.pdb
+C:\Users\karee\project\HCI-project\HCI-project\Socket alert\Ball\obj\Debug\netcoreapp3.1\Ball.genruntimeconfig.cache

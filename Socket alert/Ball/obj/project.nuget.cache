@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "K9OAo37LQ4NHJheuecn9KehTNvcn5IlqbvgzXsg2aMaHjrWOKTNXm84Or72RQbLZBA0aXFSTbxAddDoyhCWHlg==",
+  "dgSpecHash": "FhyQg1TQXZ103kmpO0ZxRzGPham2Er3qDi8FxV5OM6P9z5M712lYNybtZt6tpuxhUV8g4mn33tblt+gQgwUVLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Al-Shaimaa Atef\\Desktop\\hci project\\Ball\\Ball\\Ball.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\karee\\project\\HCI-project\\HCI-project\\Socket alert\\Ball\\Ball.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\karee\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\karee\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\karee\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\karee\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
   "logs": []
 }
