@@ -55,11 +55,11 @@ while True:
     _, frame = webcam.read()
     text,blink,right,left,center,left_pupil,right_pupil=gazetrack(blink,right,left,center,frame)
     print(text)
-    left_pupil_coordinates.append((left_pupil[0], left_pupil[1]))
-    right_pupil_coordinates.append((right_pupil[0], right_pupil[1]))
-    cv2.circle(frame, (left_pupil[0], left_pupil[1]), 5, (0, 0, 255), -1)
-    cv2.circle(frame, (right_pupil[0], right_pupil[1]), 5, (0, 255, 0), -1)
-
+    if left_pupil != None and right_pupil != None:
+        left_pupil_coordinates.append((left_pupil[0], left_pupil[1]))
+        right_pupil_coordinates.append((right_pupil[0], right_pupil[1]))
+        cv2.circle(frame, (left_pupil[0], left_pupil[1]), 5, (0, 0, 255), -1)
+        cv2.circle(frame, (right_pupil[0], right_pupil[1]), 5, (0, 255, 0), -1)
     cv2.imshow('Eye Tracking', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
