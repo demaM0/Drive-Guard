@@ -37,21 +37,12 @@ def main(frame):
         )
         count_text = f"People Count: {len(detections)}"
         cv2.putText(frame, count_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 54c9ea68873745510750df9bb401ad624e0abaab
         zone.trigger(detections=detections)
         frame = zone_annotator.annotate(scene=frame)      
         
         cv2.imshow("yolov8", frame)
         return len(detections)
-<<<<<<< HEAD
-        
-
-=======
->>>>>>> 54c9ea68873745510750df9bb401ad624e0abaab
 
 if __name__ == "__main__":
     args = parse_arguments()
