@@ -1,4 +1,4 @@
-You spent 36.36363636363637 % of your ride blinking 
-You spent 9.090909090909092 % of your ride looking at the right 
-You spent 13.636363636363635 % of your ride looking at the left 
-You spent 40.909090909090914 % of your ride looking at the center 
+You spent 0.0 % of your ride blinking 
+You spent 0.0 % of your ride looking at the right 
+You spent 100.0 % of your ride looking at the left 
+You spent 0.0 % of your ride looking at the center 

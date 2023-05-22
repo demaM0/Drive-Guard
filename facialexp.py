@@ -11,7 +11,7 @@ def facialexp(frame):
 
     # You can download the file 'haarcascade_frontalface_default.xml'
     # from cv2 Git hub
-    face_cascade = cv2.CascadeClassifier("C:/Users/karee/kkkk/haarcascade_frontalface_default.xml")
+    face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
     result = DeepFace.analyze(img_path = frame , actions=['emotion'], enforce_detection=False )
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray,1.1,4)
@@ -25,9 +25,9 @@ def facialexp(frame):
     #print(json.dumps(result,sort_keys=True, indent=4))
     #cv2.putText(frame,result[0]["dominant_emotion"][:],(50,50),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2,cv2.LINE_4)
     if result[0]["dominant_emotion"][:]=='sad' or result[0]["dominant_emotion"][:] == 'angry' or result[0]["dominant_emotion"][:]=='fear':
-        return False
-    else:
         return True
+    else:
+        return False
     #cv2.imshow('frame',frame)
 
 
