@@ -1,7 +1,7 @@
 import cv2
 from gaze_tracking import GazeTracking
 import numpy as np
-from heatmap import Heatmap
+import matplotlib.pyplot as plt
 
 def gazetrack(blink,right,left,center,frame):
 
@@ -45,8 +45,7 @@ blink=0
 right=0
 left=0
 center=0
-heatmap = Heatmap()
-heatmap_canvas = np.zeros((screen_height, screen_width, 3), dtype=np.uint8)
+
 left_pupil_coordinates = []
 right_pupil_coordinates = []
 
@@ -60,16 +59,41 @@ while True:
     right_pupil_coordinates.append((right_pupil[0], right_pupil[1]))
     cv2.circle(frame, (left_pupil[0], left_pupil[1]), 5, (0, 0, 255), -1)
     cv2.circle(frame, (right_pupil[0], right_pupil[1]), 5, (0, 255, 0), -1)
-    heatmap_canvas = heatmap.update(heatmap_canvas, left_pupil_coordinates, opacity=0.5, intensity=1.0)
-    heatmap_canvas = heatmap.update(heatmap_canvas, right_pupil_coordinates, opacity=0.5, intensity=1.0)
+
     cv2.imshow('Eye Tracking', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-heatmap_image = heatmap.generate(heatmap_canvas)
-cv2.imshow('Eye Tracking Heatmap', heatmap_image)
-cv2.waitKey(0)
+
+left_pupil_coordinates = np.array(left_pupil_coordinates)
+right_pupil_coordinates = np.array(right_pupil_coordinates)
+
+# Generate a heatmap for the left and right pupil coordinates
+heatmap_left, xedges_left, yedges_left = np.histogram2d(left_pupil_coordinates[:, 1], left_pupil_coordinates[:, 0], bins=50)
+heatmap_right, xedges_right, yedges_right = np.histogram2d(right_pupil_coordinates[:, 1], right_pupil_coordinates[:, 0], bins=50)
+
+# Create a meshgrid from the histogram bin edges
+X_left, Y_left = np.meshgrid(xedges_left, yedges_left)
+X_right, Y_right = np.meshgrid(xedges_right, yedges_right)
+
+# Plot the left pupil heatmap
+plt.figure()
+plt.imshow(heatmap_left.T, origin='lower', extent=[xedges_left[0], xedges_left[-1], yedges_left[0], yedges_left[-1]])
+plt.colorbar()
+plt.title('Left Pupil Heatmap')
+plt.xlabel('X Coordinate')
+plt.ylabel('Y Coordinate')
+plt.show()
+
+# Plot the right pupil heatmap
+plt.figure()
+plt.imshow(heatmap_right.T, origin='lower', extent=[xedges_right[0], xedges_right[-1], yedges_right[0], yedges_right[-1]])
+plt.colorbar()
+plt.title('Right Pupil Heatmap')
+plt.xlabel('X Coordinate')
+plt.ylabel('Y Coordinate')
+plt.show()
 
 webcam.release()
 cv2.destroyAllWindows()
