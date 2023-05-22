@@ -55,4 +55,20 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 webcam.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()        
+tot=blink+right+left+center
+blinkp=(blink/tot)*100
+rightp=(right/tot)*100
+leftp=(left/tot)*100
+centerp=(center/tot)*100
+# text_file = open(chosentxt, "w")
+# text_file.write(my_text_box.get(1.0, END))
+# text_file.close()
+
+with open("output.txt","w+") as file:
+    file.write(f'You spent { str(blinkp)} % of your ride blinking \n')
+    file.write(f'You spent { str(rightp)} % of your ride looking at the right \n')
+    file.write(f'You spent { str(leftp)} % of your ride looking at the left \n')
+    file.write(f'You spent { str(centerp)} % of your ride looking at the center \n')
+    print(str(blinkp))
+#file.close()
