@@ -1,12 +1,13 @@
 import cv2
 import numpy as np
-cap = cv2.VideoCapture(0)
-while True:
+def laser_tracker(frame):
+    #cap = cv2.VideoCapture(0)
+    #while True:
     # Read a frame from the video source
-    ret, frame = cap.read()
+    #ret, frame = cap.read()
 
-    if not ret:
-        break
+    #if not ret:
+    #   break
 
     # Convert the frame to the HSV color space for easier color filtering
     hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -37,20 +38,22 @@ while True:
         screen_width = frame.shape[1]
         if center_x < screen_width // 2:
             text = "Left"
+            #return "steering left"
         else:
             text = "Right"
+            #return "steering right"
 
         # Draw the center point and text on the frame
-        cv2.circle(frame, (center_x, center_y), 5, (0, 255, 0), -1)
-        cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
-    # Display the frame
-    cv2.imshow("Frame", frame)
+    #     cv2.circle(frame, (center_x, center_y), 5, (0, 255, 0), -1)
+    #     cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+    #
+    # # Display the frame
+    # cv2.imshow("Frame", frame)
 
     # Exit the loop if the 'q' key is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    # if cv2.waitKey(1) & 0xFF == ord('q'):
+    #     break
 
-# Release the video capture object and close any windows
-cap.release()
-cv2.destroyAllWindows()
+    # Release the video capture object and close any windows
+    # cap.release()
+    # cv2.destroyAllWindows()
