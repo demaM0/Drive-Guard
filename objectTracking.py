@@ -37,7 +37,7 @@ def main(frame):
         )
         count_text = f"People Count: {len(detections)}"
         cv2.putText(frame, count_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-        
+
         zone.trigger(detections=detections)
         frame = zone_annotator.annotate(scene=frame)      
         
@@ -69,7 +69,6 @@ if __name__ == "__main__":
         text_thickness=4,
         text_scale=2
     )
-
     while True:
         ret, frame = cap.read()
         peoplecount = main(frame)
