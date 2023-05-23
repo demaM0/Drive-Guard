@@ -25,9 +25,9 @@ def facialexp(frame):
     #print(json.dumps(result,sort_keys=True, indent=4))
     #cv2.putText(frame,result[0]["dominant_emotion"][:],(50,50),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2,cv2.LINE_4)
     if result[0]["dominant_emotion"][:]=='sad' or result[0]["dominant_emotion"][:] == 'angry' or result[0]["dominant_emotion"][:]=='fear':
-        return True
+        return result[0]["dominant_emotion"][:]
     else:
-        return False
+        return result[0]["dominant_emotion"][:]
     #cv2.imshow('frame',frame)
 
 
